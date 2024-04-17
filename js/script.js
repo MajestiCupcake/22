@@ -144,14 +144,14 @@ function resetForm() {
     span3.textContent = "";
  }  
 
-//TODO: check email valid (check email contains "@" and ".com")
+//check email valid (check email contains "@" and ".xxx")
 function validateEmail(address) {
     //Standard expression for validating an email address - referenced multiple webpages but I got ChatGPT to talk me through it
     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     //Checks if input to email field matches the pattern of the regex
     if(regex.test(address)) {
-        return true //Email is in a valid form, it's possible it exists
+        return true; //Email is in a valid form, it's possible it exists
     }
     else {
         return false; //Email not valid
@@ -166,7 +166,7 @@ if (form) {
 }
 //Reference: KIT202 Tutorial 5, shoutouts for the code piece
 
-//TODO: prevents registration form being submitted if any fields are empty or if password and confirm password do not match
+//prevents registration form being submitted if any fields are empty or if password and confirm password do not match
 function validateRegoForm(event) {
     //stops page from refreshing
     event.preventDefault();
@@ -207,7 +207,7 @@ function validateRegoForm(event) {
 }
 //reference: KIT202 tutorial 5
 
-//code recycled from Sara's resetForm function, clears fields on Registration page
+//code recycled from Sara's resetForm function above, clears fields on Registration page
 function resetRegoForm() {
     let field1 = document.getElementById("username");
     let field2 = document.getElementById("email");
@@ -219,5 +219,6 @@ function resetRegoForm() {
     field3.textContent = "";
     field4.textContent = "";
 }
+
 //TODO: submit button links back to homepage
 
