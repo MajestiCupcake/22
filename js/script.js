@@ -150,10 +150,20 @@ function resetForm() {
     let span1 = document.getElementById("span_title");
     let span2 = document.getElementById("span_tags");
     let span3 = document.getElementById("span_content");
+    let error1 = document.getElementById("title_error");
+    let error2 = document.getElementById("tags_error");
+    let error3 = document.getElementById("content_error");
  
     span1.textContent = "";
     span2.textContent = "";
     span3.textContent = "";
+    span1.style.borderColor = '#025E73';
+    error1.textContent = '';
+    span2.style.borderColor = '#025E73';
+    error2.textContent = '';
+    span3.style.borderColor = '#025E73';
+    error3.textContent = '';
+
  }  
 
 //check email valid (check email contains "@" and ".xxx")
@@ -266,9 +276,23 @@ function resetRegoForm() {
     let field2 = document.getElementById("email");
     let field3 = document.getElementById("password");
     let field4 = document.getElementById("cpassword");
+    let error1 = document.getElementById("usernameError");
+    let error2 = document.getElementById("emailError");
+    let error3 = document.getElementById("passwordError");
+    let error4 = document.getElementById("cpasswordError");
  
     field1.textContent = "";
     field2.textContent = "";
     field3.textContent = "";
     field4.textContent = "";
+
+    error1.textContent="";
+    error2.textContent="";
+    error3.textContent="";
+    error4.textContent="";
+    document.getElementById("email").setAttribute("style", "border-color: #025E73");
+    document.getElementById("username").setAttribute("style", "border-color: #025E73");
+    document.getElementById("password").setAttribute("style", "border-color: #025E73");
+    document.getElementById("cpassword").setAttribute("style", "border-color: #025E73");
+
 }
