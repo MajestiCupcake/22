@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Harrison, Pooja, Liam & Sara - Group 3">
+    <link rel="icon" href="img/penguin.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+    <title>SUB</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img id="logo" src="img/logo.png" alt="Logo">
+        </a>
+    
+        <nav>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="login.html">Login</a>
+                <a href="create.html">Post</a>
+                <a href="archive.html">Archive</a>
+                <a href="about.html">About Us</a>
+                <a class="active" href="registration.html">Register</a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="registration-section">
+            <h2>Registration</h2>
+            <div id="error"></div>
+            <form class="registrationForm" id="registrationForm" action="" novalidate>
+                <label for="username">Username:</label>
+                <input class="input" type="text" id="username" name="username" required>
+                <div id="usernameError"></div>
+                <label for="email">Email address:</label>
+                <input class="input" type="email" id="email" name="email" pattern required>
+                <div id="emailError"></div>
+                <label for="password">Password:</label>
+                <input class="input" type="password" id="password" name="password" required minlength="6" maxlength="12">
+                <div id="passwordError"></div>
+                <label for="cpassword">Confirm password:</label>
+                <input class="input" type="password" id="cpassword" name="cpassword" required minlength="6" maxlength="12">
+                <div id="cpasswordError"></div>
+                <div id="form-actions">
+                    <button type="submit" class="actionButton" id="rego_submit">Submit</button>
+                    <button type="reset" class="actionButton" id="rego_reset" onclick="resetRegoForm()">Reset</button></p>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

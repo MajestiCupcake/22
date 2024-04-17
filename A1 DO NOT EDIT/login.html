@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SUB</title>
+    <meta name="author" content="Harrison, Pooja & Sara - Group 3">
+    <link rel="icon" href="img/penguin.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+<header>
+    <a href="index.html">
+        <img id="logo" src="img/logo.png" alt="Logo">
+    </a>
+
+    <nav>
+        <ul>
+            <a href="index.html">Home</a>
+            <a class="active" href="login.html">Login</a>
+            <a href="create.html">Post</a>
+            <a href="archive.html">Archive</a>
+            <a href="about.html">About Us</a>
+            <a href="registration.html">Register</a>
+
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="login-section">
+        <h2> Login</h2>
+        <form class="login" id="login">
+                <p id="user_error"></p>
+                <label for="username">Username:</label>
+                <input class="input" type="text" id="login-username" name="username">
+    
+                <p id="psw_error"></p>
+                <label for="password">Password:</label>
+                <input class="input" type="password" id="login-password" name="password"> <br><br>
+            <div class="login-actions" id="login-actions">
+                <button class="actionButton" type="button" id="new"   onclick="window.location.href='registration.html';">Register</button>
+                <button class="actionButton" type="button" id="login" onclick="checkForm()">Login</button>
+            </div>
+        </form>
+
+    </div>
+
+</main>
+</body>
+
+</html>

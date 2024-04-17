@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Harrison, Pooja & Sara - Group 3">
+    <link rel="icon" href="img/penguin.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>SUB</title>
+</head>
+<body>
+<header>
+    <a href="index.html">
+        <img id="logo" src="img/logo.png" alt="Logo">
+    </a>
+
+    <nav>
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a class="active" href="create.html">Post</a>
+            <a href="archive.html">Archive</a>
+            <a href="about.html">About Us</a>
+            <a href="registration.html">Register</a>
+
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="create-section">
+        <h2> Add a new post - yay</h2>
+        <p> Build the post here:</p>
+        <form id="loginForm" novalidate>
+            <div class="row">
+                <h4>Title:</h4>
+                <p id="title_error"></p>
+                <span class="textarea" role="textbox" contenteditable id="span_title" placeholder="The funniest thing happend"></span>
+            </div>
+            <div class="row">
+                <h4>Tags:</h4>
+                <p id="tags_error"></p>
+                <span class="textarea" role="textbox" contenteditable id="span_tags" placeholder="LOL, WOW"></span>
+            </div>
+            <div class="row">
+                <h4>Breadtext:</h4>
+                <p id="content_error"></p>
+                <span class="textarea" role="textbox" contenteditable id="span_content" placeholder="Once upon a time..."></span>
+            </div>
+        </form>
+        <div class="container2">
+                <button class="actionButton" type="button" id="reset" onclick="resetForm()">Reset</button>
+                <button class="actionButton" type="button" id="submit" onclick="validateForm()">Submit</button>
+        </div>
+    </div>
+</main>
+</body>
+</html>
