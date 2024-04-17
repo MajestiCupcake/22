@@ -19,31 +19,43 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
 // Return to top of page
-document.addEventListener('DOMContentLoaded', function() {
 
-    const articles = document.querySelectorAll('.post');
 
-    articles.forEach(article => {
-        const articleText = article.querySelector('.articleText');
-        const hideButton = article.querySelector('.hideButton');
-        const showButton = article.querySelector('.showButton');
+var scrollToTopButton = document.getElementsByClassName('scroll-button')[0];
 
-        hideButton.addEventListener('click', function() {
-            articleText.style.display = 'none';
-            hideButton.style.display = 'none';
-            showButton.style.display = 'inline';
-        });
-
-        showButton.addEventListener('click', function() {
-            articleText.style.display = 'block';
-            showButton.style.display = 'none';
-            hideButton.style.display = 'inline';
+if (scrollToTopButton) {
+    // Add a click event listener to the button
+    scrollToTopButton.addEventListener('click', function() {
+        // Scroll to the top of the page smoothly
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
     });
+}
 
+
+// Hide text button
+const articles = document.querySelectorAll('.post');
+articles.forEach(article => {
+    const articleText = article.querySelector('.articleText');
+    const hideButton = article.querySelector('.hideButton');
+    const showButton = article.querySelector('.showButton');
+
+    hideButton.addEventListener('click', function() {
+        articleText.style.display = 'none';
+        hideButton.style.display = 'none';
+        showButton.style.display = 'inline';
+    });
+
+    showButton.addEventListener('click', function() {
+        articleText.style.display = 'block';
+        showButton.style.display = 'none';
+        hideButton.style.display = 'inline';
+    });
 });
+
 
 // check password
 function checkPassword() {
