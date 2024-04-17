@@ -191,45 +191,59 @@ function validateRegoForm(event) {
     //stops page from refreshing
     event.preventDefault();
 
+    //a variable to count errors on the page
+    let i = 0;
+    
     //checks if there is content in the username field, returns an error if not
     if(document.forms["registrationForm"].elements.username.value == "") {
         document.getElementById("usernameError").innerHTML = "Enter a valid username";
-        document.getElementById("username").setAttribute("style", "border-color: red");  
+        document.getElementById("username").setAttribute("style", "border-color: red");
+        i++;
     }
     //checks if there is content in the email field, returns an error if not
     if(document.forms["registrationForm"].elements.email.value == "") {
         document.getElementById("emailError").innerHTML = "Enter an email";
         document.getElementById("email").setAttribute("style", "border-color: red");
+        i++;
     }
     else {
         //checks the format of the email field, returns an error if invalid
         if(validateEmail(document.forms["registrationForm"].elements.email.value) == false) {
             document.getElementById("emailError").innerHTML = "Email not valid form";
             document.getElementById("email").setAttribute("style", "border-color: red");
+            i++;
         }
     }
     //checks if there is content in the password field, returns an error if not
     if(document.forms["registrationForm"].elements.password.value == "") {
         document.getElementById("passwordError").innerHTML = "Enter a password";
         document.getElementById("password").setAttribute("style", "border-color: red");
+        i++;
     }
     else {
         //checks if the password conforms to the password policy, returns an error if not
         if(validatePassword(document.forms["registrationForm"].elements.password.value) == false) {
             document.getElementById("passwordError").innerHTML = "Password must be at least 10 characters and contain 1 lowercase and 1 uppercase letter, 1 number and 1 symbol";
             document.getElementById("password").setAttribute("style", "border-color: red");
+            i++;
         }
     }
     //checks if there is content in the confirm password field, returns an error if not  
     if(document.forms["registrationForm"].elements.cpassword.value == "") {
         document.getElementById("cpasswordError").innerHTML = "Confirm password";
-        document.getElementById("cpassword").setAttribute("style", "border-color: red");  
+        document.getElementById("cpassword").setAttribute("style", "border-color: red");
+        i++;
     }
     //checks if the password and confirm password fields match, returns an error if not
     if(document.forms["registrationForm"].elements.password.value !== document.forms["registrationForm"].elements.cpassword.value) {
         document.getElementById("cpasswordError").innerHTML = "Passwords do not match";
         document.getElementById("cpassword").setAttribute("style", "border-color: red");
         document.getElementById("password").setAttribute("style", "border-color: red");
+        i++;
+    }
+    //if no errors on the page, on submit, redirect to site homepage - otherwise do nothing
+    if(i === 0) {
+        window.location.href="index.html";
     }
 }
 //reference: KIT202 tutorial 5
