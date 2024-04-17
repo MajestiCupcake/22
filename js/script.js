@@ -158,6 +158,26 @@ function validateEmail(address) {
     }
 }
 
+//checks password confirms to password policy
+function validatePassword(input) {
+    //let input = document.forms["registrationForm"].elements.password.value;
+    let lowercase = /[a-z]/g;
+    let uppercase = /[A-Z]/g;
+    let numbers = /[0-9]/g;
+    let symbols = /[!-\/:-@[-`{-~]/;
+    if(document.forms["registrationForm"].elements.password.value.match(lowercase) 
+    && document.forms["registrationForm"].elements.password.value.match(uppercase) 
+    && document.forms["registrationForm"].elements.password.value.match(numbers) 
+    && document.forms["registrationForm"].elements.password.value.match(symbols) 
+    && document.forms["registrationForm"].elements.password.value.length > 9) {
+        return true; //password conforms to password policy, that is contains at least 1 letter, 1 number, one symbol 
+        //and is at least 10 characters long
+    }
+    else {
+        return false;
+    }
+}
+
 const form = document.forms["registrationForm"];
 if (form) {
     form.addEventListener("submit", validateRegoForm);
@@ -192,6 +212,13 @@ function validateRegoForm(event) {
     if(document.forms["registrationForm"].elements.password.value == "") {
         document.getElementById("passwordError").innerHTML = "Enter a password";
         document.getElementById("password").setAttribute("style", "border-color: red");
+    }
+    else {
+        //checks if the password conforms to the password policy, returns an error if not
+        if(validatePassword(document.forms["registrationForm"].elements.password.value) == false) {
+            document.getElementById("passwordError").innerHTML = "Password must be at least 10 characters and contain 1 lowercase and 1 uppercase letter, 1 number and 1 symbol";
+            document.getElementById("password").setAttribute("style", "border-color: red");
+        }
     }
     //checks if there is content in the confirm password field, returns an error if not  
     if(document.forms["registrationForm"].elements.cpassword.value == "") {
