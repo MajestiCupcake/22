@@ -85,33 +85,6 @@ button {
     color: #025E73;
 }
 
-.actionButton{
-    padding: 15px 30px;
-    width: auto;
-    cursor: pointer;
-    background-color: #639CBF;
-    color:#ffffff;
-    font-family: inherit;
-    border-color: #639CBF;
-    border-radius: 10px;
-}
-
-.actionButton:hover {
-    padding: 15px 30px;
-    width: auto;
-    cursor: pointer;
-    background-color: #025E73;
-    color: #ffffff;
-    font-family: inherit;
-    border-color: #025E73;
-    border-radius: 10px;
-}
-
-.actionButton a{
-    text-decoration: none;
-    color: #ffffff;
-}
-
 .hideButton, .showButton {
     padding: 10px 20px;
     font-size: 1em;
@@ -220,7 +193,7 @@ nav input[type=text] {
     border: 3px solid #ADC8D9;
     border-radius: 10px;
     padding: 10px;
-    width: 90%;
+    width: 20%;
     height: 10%;
     margin: 5% auto 20%;
     box-sizing: border-box;
@@ -233,9 +206,6 @@ nav input[type=text] {
     padding: 5px;
 }
 
-.login-actions a{
-    text-decoration: none;
-}
 
 .registration-section {
     background-color: #DCEAF2;
@@ -243,37 +213,42 @@ nav input[type=text] {
     border: 3px solid #ADC8D9;
     border-radius: 10px;
     padding: 10px;
-    width: 65%;
+    width: 20%;
     height: 10%;
     margin: 5% auto 20%;
     box-sizing: border-box;
     font-size: 1.5em;
 }
 
-#registrationForm {
-    display: grid;
-    grid-template-columns: auto 250px 250px;
-    column-gap: 10px;
-    row-gap: 1px;
-    justify-content: left;
-}
-
-#form-actions {
-    grid-column-end: span 3;
-}
-
-.registration-input[type="text"], .registration-input[type="email"] .registration-input[type="password"] {
+.registration-section input[type="text"],
+.registration-section input[type="email"],
+.registration-section input[type="password"] {
     width: 60%;
     height: 20px;
-    padding: 5px;
+    padding: 10px;
 }
-    
-.input[type="text"], .input[type="password"], .input[type="email"] {
-    height: 20px;
-    padding: 5px;
-    font-family: inherit;
-    font-size:smaller;
-    border-color:#025E73;
+
+.registration-section h2 {
+    color: #025E73;
+    margin-bottom: 20px;
+}
+
+.registration-section label {
+    display: block;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #025E73;
+}
+
+.registration-section #form-actions {
+    margin-top: 20px;
+}
+
+
+#new, #login {
+    padding: 15px 30px;
+    width: auto;
 }
 
 .create-section {
@@ -309,6 +284,15 @@ nav input[type=text] {
     color: gray;
     text-align: center;
 }
+
+#reset, #create, #submit {
+    padding: 15px 30px;
+    width: auto;
+    cursor: pointer;
+    background-color: #639CBF;
+    color: #025E73;
+}
+
 
 .about-section {
     background-color: #DCEAF2;
@@ -352,10 +336,16 @@ nav input[type=text] {
         width: 90%;
         padding: 5px;
         font-size: 1em;
-        line-height: 50px;
     }
 
     .login-section input[type="text"], .login-section input[type="password"] {
+        width: 80%;
+        padding: 3px;
+    }
+
+    .registration-section input[type="text"],
+    .registration-section input[type="email"],
+    .registration-section input[type="password"] {
         width: 80%;
         padding: 3px;
     }
