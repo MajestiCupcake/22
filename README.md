@@ -64,25 +64,25 @@ Timeline:
   - [X] ~~and a button to reset (clear) the form fields values~~
   Within your group, decide on a password policy (a set of rules governing password requirements)
   Your policy should incorporate a minimum length and a required combination of letters (uppercase and lowercase), digits (0–9), or symbols/special characters
-  - [ ] policy (characters 2-22, one number)
+  - [X] ~~policy (characters 2-22, one number)~~
   Include JavaScript field validation to prevent the registration form from being submitted if:
   - [X] ~~any of the fields are empty~~
   - [X] ~~the email address field does not contain a valid email address (i.e., is not well-formed; you do not need to check if exists) (check if @ is present)~~
   - [X] ~~the password and confirm password fields do not match (i.e., do not contain the same value)~~
-  - [ ] the password does not conform to your password policy
-  - [ ] Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms (refering to login and registration)  
+  - [X] ~~the password does not conform to your password policy~~
+  - [X] ~~Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms (refering to login and registration)~~  
   - [X] ~~Clicking the reset button should clear all form field values~~
 - [create post](create.html)
   - [X]  ~~The page should include a form element with input fields and labels for the post’s title, tags/keywords, and content with a button to create the post and a button to reset (clear) the form~~
   - [X]  ~~Include JavaScript field validation to prevent the form from being submitted if:~~
     - [X] ~~any of the fields are empty (yes, the author must always supply at least one tag/keyword)~~
     - [X] ~~the title field exceeds 80 characters~~
-    - [ ] As with the other forms, built-in HTML validation will need to be disabled Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms
+    - [X] ~~As with the other forms, built-in HTML validation will need to be disabled Form validation (and behaviour upon successful validation/submission) should operate as specified for all forms~~
   - [X] ~~Clicking the reset button should clear all form field values~~
 - [About page](about.html)
   - [X] ~~Include the names and student IDs of each group member~~
-  - [ ] Include a reference list for all assets used that have not been created by your group (e.g., images, fonts, icons, etc.)
-  - [ ] References to web resources should include the link to the specific page used and not just the top-level site
+  - [X] ~~Include a reference list for all assets used that have not been created by your group (e.g., images, fonts, icons, etc.)~~
+  - [X] ~~References to web resources should include the link to the specific page used and not just the top-level site~~
  
 ### STYLE REQUIREMENTS
 All pages should adhere to the following style requirements and function correctly in the Chrome browser.  Templates and prebuilt themes are prohibited: your design should represent an original creation by your group.
