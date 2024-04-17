@@ -1,4 +1,3 @@
-
 // Changes from the header to the header scrolled position
 window.addEventListener('scroll', function() {
     const header = document.querySelector('header');
@@ -20,8 +19,6 @@ window.addEventListener('scroll', function() {
 });
 
 // Return to top of page
-
-
 var scrollToTopButton = document.getElementsByClassName('scroll-button')[0];
 
 if (scrollToTopButton) {
@@ -34,7 +31,6 @@ if (scrollToTopButton) {
         });
     });
 }
-
 
 // Hide text button
 const articles = document.querySelectorAll('.post');
@@ -56,8 +52,7 @@ articles.forEach(article => {
     });
 });
 
-
-// check password
+//check password
 function checkPassword() {
     var password = document.getElementById('password').value;
     var confirmPassword = "22";
@@ -68,11 +63,7 @@ function checkPassword() {
     document.location.href='./index.html';
 }
 
-//TODO: check email valid (check email contains "@" and ".") #edit not everyone uses .com
-
-
-//TODO: prevents forms being submitted if fields are empty
-
+//prevents forms being submitted if fields are empty
 function checkForm() {
         var elements = [{id: "login-username", error:"user_error"},{id: "login-password",error:"psw_error"}];
         console.log(elements);
@@ -107,7 +98,7 @@ function checkForm() {
     }
 }
 
-// only works for the two first items
+//only works for the two first items
 function validateForm() {
     var elements = [
         {inputId: "span_title", error: "title_error", maxLength: 80, errorMessage: "This title is too long, try using less than 80 characters" },
@@ -144,8 +135,7 @@ function validateForm() {
     }
 }
 
-
-//TODO: reset function, clears all fields
+//reset function, clears all fields
 function resetForm() {
     let span1 = document.getElementById("span_title");
     let span2 = document.getElementById("span_tags");
@@ -268,7 +258,6 @@ function validateRegoForm(event) {
         window.location.href="index.html";
     }
 }
-//reference: KIT202 tutorial 5
 
 //code recycled from Sara's resetForm function above, clears fields on Registration page
 function resetRegoForm() {
