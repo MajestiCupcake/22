@@ -260,6 +260,3 @@ function resetRegoForm() {
     field3.textContent = "";
     field4.textContent = "";
 }
-
-//TODO: submit button links back to homepage
-
